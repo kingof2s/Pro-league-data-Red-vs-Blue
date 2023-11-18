@@ -1,0 +1,6 @@
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+
+title: Red vs Blue
+description: Analysis on the fairness of League of Legends' Blue vs Red sides through historical data on official competition matches
