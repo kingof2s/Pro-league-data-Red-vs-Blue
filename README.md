@@ -19,15 +19,12 @@ Here are some steps we took in order to gather and clean the data
 4. Fill missing playernames with "unknown player" (we will take a look at this in assessment of missingness).
 
 After completing these steps, here is the dataset we worked with.
-|       | gameid               | league   |   game |   patch | side   | teamname        |   gamelength |   result |   dragons |   elders |   opp_elders |   heralds |   barons |   opp_barons |   towers |   inhibitors |   vspm | Win?   |
-|------:|:---------------------|:---------|-------:|--------:|:-------|:----------------|-------------:|---------:|----------:|---------:|-------------:|----------:|---------:|-------------:|---------:|-------------:|-------:|:-------|
-| 32650 | ESPORTSTMNT02/180233 | EU CS    |      1 |     7.1 | Blue   | MNM Gaming      |         2387 |        1 |         2 |        0 |            0 |         0 |        2 |            0 |        7 |            1 | 7.6414 | Win    |
-| 32651 | ESPORTSTMNT02/180233 | EU CS    |      1 |     7.1 | Red    | Millenium       |         2387 |        0 |         2 |        0 |            0 |         1 |        0 |            2 |        6 |            1 | 9.0239 | Loss   |
-| 32662 | ESPORTSTMNT02/180242 | EU CS    |      1 |     7.1 | Blue   | EURONICS Gaming |         1762 |        0 |         0 |        0 |            0 |         0 |        0 |            2 |        0 |            0 | 6.4018 | Loss   |
-| 32663 | ESPORTSTMNT02/180242 | EU CS    |      1 |     7.1 | Red    | Red Bulls       |         1762 |        1 |         3 |        0 |            0 |         0 |        2 |            0 |       11 |            2 | 8.6493 | Win    |
-| 32674 | ESPORTSTMNT02/190231 | EU CS    |      1 |     7.1 | Blue   | Reign           |         2644 |        0 |         2 |        0 |            1 |         0 |        0 |            3 |        5 |            1 | 7.1029 | Loss   |
-
-
+<br>
+| Priority apples | Second priority | Third priority |
+|-------|--------|---------|
+| ambrosia | gala | red delicious |
+| pink lady | jazz | macintosh |
+| honeycrisp | granny smith | fuji |
 
 Univariate Analysis: 
 
