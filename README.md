@@ -21,13 +21,13 @@ Here are some steps we took to gather and clean the data
 
 After completing these steps, here is the dataset we worked with.
 
-|       | gameid               | league   |   game |   patch | side   | position   |   playername | teamname        |   champion |   gamelength |   result |   dragons |   elders |   opp_elders |   heralds |   barons |   opp_barons |   towers |   inhibitors |   vspm | Win?   |
-|------:|:---------------------|:---------|-------:|--------:|:-------|:-----------|-------------:|:----------------|-----------:|-------------:|---------:|----------:|---------:|-------------:|----------:|---------:|-------------:|---------:|-------------:|-------:|:-------|
-| 32650 | ESPORTSTMNT02/180233 | EU CS    |      1 |     7.1 | Blue   | team       |          nan | MNM Gaming      |        nan |         2387 |        1 |         2 |        0 |            0 |         0 |        2 |            0 |        7 |            1 | 7.6414 | Win    |
-| 32651 | ESPORTSTMNT02/180233 | EU CS    |      1 |     7.1 | Red    | team       |          nan | Millenium       |        nan |         2387 |        0 |         2 |        0 |            0 |         1 |        0 |            2 |        6 |            1 | 9.0239 | Loss   |
-| 32662 | ESPORTSTMNT02/180242 | EU CS    |      1 |     7.1 | Blue   | team       |          nan | EURONICS Gaming |        nan |         1762 |        0 |         0 |        0 |            0 |         0 |        0 |            2 |        0 |            0 | 6.4018 | Loss   |
-| 32663 | ESPORTSTMNT02/180242 | EU CS    |      1 |     7.1 | Red    | team       |          nan | Red Bulls       |        nan |         1762 |        1 |         3 |        0 |            0 |         0 |        2 |            0 |       11 |            2 | 8.6493 | Win    |
-| 32674 | ESPORTSTMNT02/190231 | EU CS    |      1 |     7.1 | Blue   | team       |          nan | Reign           |        nan |         2644 |        0 |         2 |        0 |            1 |         0 |        0 |            3 |        5 |            1 | 7.1029 | Loss   |
+|    | gameid   | league   |   patch | side   |   gamelength |   result |   dragons |   elders |   opp_elders |   barons |   opp_barons | Win?   |
+|---:|:---------|:---------|--------:|:-------|-------------:|---------:|----------:|---------:|-------------:|---------:|-------------:|:-------|
+| 10 | TRLH3/33 | EU LCS   |    3.15 | Blue   |         1924 |        1 |         0 |        0 |            0 |        1 |            0 | Win    |
+| 11 | TRLH3/33 | EU LCS   |    3.15 | Red    |         1924 |        0 |         0 |        0 |            0 |        0 |            1 | Loss   |
+| 22 | TRLH3/44 | EU LCS   |    3.15 | Blue   |         2474 |        1 |         0 |        0 |            0 |        1 |            0 | Win    |
+| 23 | TRLH3/44 | EU LCS   |    3.15 | Red    |         2474 |        0 |         0 |        0 |            0 |        0 |            1 | Loss   |
+| 34 | TRLH3/76 | EU LCS   |    3.15 | Blue   |         2629 |        0 |         0 |        0 |            0 |        0 |            1 | Loss   |
 {:.mbtablestyle}
 
 Univariate Analysis: 
@@ -42,10 +42,10 @@ For our bivariate analysis, we included several plots. One of the ones we tracke
 
 In a game of League of Legends, there exist neutral objectives around the map. These objectives can be taken by either team, but doing so requires you to fight them (and usually the opposite team as well). However, a team that manages to take one gets a large advantage for doing so. Since 2 of these objectives, Elder Dragon and Baron Nashor spawn on different sides of the map, we decided to test how much a team's side affects their likelihood to take each of these neutral objectives.  
 
-| Baron Bins     |   ('Winrate', 'Blue') |   ('Winrate', 'Red') |
-|:---------------|----------------------:|---------------------:|
-| Less Barons    |                  9.29 |                 7.15 |
-| Same Barons    |                 57.5  |                42.45 |
-| 1 More Baron   |                 92.82 |                90.1  |
-| 2+ More Barons |                 92.91 |                92.17 |
+| Baron Advantage |   ('Winrate', 'Blue') |   ('Winrate', 'Red') |
+|:----------------|----------------------:|---------------------:|
+| Less Barons     |                  9.29 |                 7.15 |
+| Same Barons     |                 57.5  |                42.45 |
+| 1 More Baron    |                 92.82 |                90.1  |
+| 2+ More Barons  |                 92.91 |                92.17 |
 {:.mbtablestyle}
