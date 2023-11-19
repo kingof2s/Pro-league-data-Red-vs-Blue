@@ -10,4 +10,10 @@ We wanted to take a look at how those differences affect pro matches by asking t
   **Does the side that a professional team is assigned influence the outcome of the game?**
 
 ## Cleaning 
-In order to answer this question, our first step was to get the data into usable format. We downloaded each tracked year of professional league games as csvs from oracle elixir, and our first step was to combine them into a single dataset. When doing this we dropped all columns we didn't need. We then changed the date column from the dataset to use a datetime format, which made it easier if we wanted to look at data within a specific time interval. We also cut off any games from after 2023-10-01, since the league is still ongoing at the time of this project. 
+Here are some steps we took in order to gather and clean the data 
+1. Download all the data from years 2014-2023 from oracle as csv files, open them and combine into 1 dataset
+2. Convert the date to datatime, making it easier to look at data within a certain time interval
+3. Remove all data after 10-01-2023, since it is ongoing at the time of our project
+4. Fill missing playernames with "unknown player" (we will take a look at this in assessment of missingness).
+
+After completing these steps, here is the dataset we worked with. 
