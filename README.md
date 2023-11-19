@@ -17,5 +17,4 @@ Here are some steps we took in order to gather and clean the data
 4. Fill missing playernames with "unknown player" (we will take a look at this in assessment of missingness).
 
 After completing these steps, here is the dataset we worked with.
-![image](files://plots/univariate.html)
 <iframe> src="plots/univariate.html" width=800 height=600 frameBorder=0></iframe>
