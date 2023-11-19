@@ -3,6 +3,7 @@ Used in dsc80 project 3
 # Introduction
 Our dataset for this project is the set of all professional League of Legends games played, beginning in 2014. 
 Each game of league of legends is played on a diagonal asymmetrical map, which roughly looks like 
+
 <iframe src="assets/summoners_rift.jpg" transform=scale(0.25) width=800 height=600 frameBorder=0></iframe>.
 
 
