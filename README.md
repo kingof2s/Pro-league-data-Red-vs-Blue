@@ -42,7 +42,7 @@ For our bivariate analysis, we included several plots. One of the ones we tracke
 
 In a game of League of Legends, there exist neutral objectives around the map. These objectives can be taken by either team, but doing so requires you to fight them (and usually the opposite team as well). However, a team that manages to take one gets a large advantage for doing so. Since 2 of these objectives, Elder Dragon and Baron Nashor spawn on different sides of the map, we decided to test how much a team's side affects their likelihood to take each of these neutral objectives.  
 
-| Baron Advantage |   ('Winrate', 'Blue') |   ('Winrate', 'Red') |
+| Baron Advantage |   Blue side winrate   |   Red side winrate   |
 |:----------------|----------------------:|---------------------:|
 | Less Barons     |                  9.29 |                 7.15 |
 | Same Barons     |                 57.5  |                42.45 |
