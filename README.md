@@ -32,23 +32,37 @@ After completing these steps, here is the dataset we worked with.
 
 ## Univariate Analysis: 
 
-Our univariate analysis is very simple, we looked at the winrate distribution between red and blue side. Blue side had a minor but noticable winrate advantage overall, which lines up with By plotting a chart, we get 
-
 <iframe src="plots/univariate.html" width=800 height=600 frameBorder=0></iframe>
+
+This pie chart shows that the `blue` side tends to win more games than the `red` side, suggesting that starting on the `blue` side might have provided certain advantages over the `red` side.
+
 
 ## Bivariate Analysis:
 
-For our bivariate analysis, we included several plots. One of the ones we tracked is win percentage by side by game length, where we split up our win rate by side into several different game length buckets. We found that the win rate advantage for blue side in shorter games (15-30) min was very high, above a 10% difference, while in longer games the winrate advantage for blue side was barely noticeable.   
+For our bivariate analysis, we included several plots. One of the ones we tracked is the `win percentage` on each `side` by `gamelength`, where we split up our win rate by side into several different `gamelength` buckets. We found that the win rate advantage for blue side in shorter games (15-30) min was very high, above a 10% difference, while in longer games it seems that the `red` team tend to have a higher win rate.   
 
 <iframe src="plots/bivariate.html" width=800 height=600 frameBorder=0></iframe>
 
-In a game of League of Legends, there exist neutral objectives around the map. These objectives can be taken by either team, but doing so requires you to fight them (and usually the opposite team as well). However, a team that manages to take one gets a large advantage for doing so. Since 2 of these objectives, Elder Dragon and Baron Nashor spawn on different sides of the map, we decided to test how much a team's side affects their likelihood to take each of these neutral objectives.  
+This vertical bar chart shows the `Blue Side Winrate Advantage` (y-axis), defined as `Blue side winrate - Red side winrate`, as grouped by "buckets" of `gamelength` (x-axis). We see that the `blue` teams are more likely to win in short-lasting matches (15-30 minutes), with the `Blue Side Winrate Advantage` decreasing as `gamelength` increases.
 
-| Baron Bins     |   ('Winrate', 'Blue') |   ('Winrate', 'Red') |
-|:---------------|----------------------:|---------------------:|
-| Less Barons    |                  9.29 |                 7.15 |
-| Same Barons    |                 57.5  |                42.45 |
-| 1 More Baron   |                 92.82 |                90.1  |
-| 2+ More Barons |                 92.91 |                92.17 |
+## Interesting Aggregates:
+
+In a round of League of Legends, there exist neutral objectives that spawn in fiexd locations in the map. These objectives are monsters that can be taken by either team, but doing so requires you to fight them (and usually the opposite team too). However, a team that manages to take one earns a large advantage, whether through bonus gold that can be used for purchasing powerful items, or a teamwide increase in the character's combat power. There are two major neutral objectives, the Elder Dragon and Baron Nashor, that spawn on different sides of the map that are especially impactful to the game, so we decided to test how much a team's starting side affects the likelihood for them to take either of those two. The Elder Dragon spawns closer to the blue side of the map, while Baron Nashor spawns closer to the red side of the map. 
+
+| Baron Advantage |   Blue Winrate |   Red Winrate  |
+|:----------------|---------------:|---------------:|
+| Less Barons     |           9.29 |           7.15 |
+| Same Barons     |          57.5  |          42.45 |
+| 1 More Baron    |          92.82 |          90.1  |
+| 2+ More Barons  |          92.91 |          92.17 |
 {:.mbtablestyle}
+
+| Elder Advantage |   Blue Winrate |   Red Winrate  |
+|:----------------|---------------:|---------------:|
+| Less Elders     |          16.76 |          19.4  |
+| Same Elders     |          53.61 |          46.37 |
+| 1 More Elder    |          80.42 |          83.23 |
+| 2+ More Elders  |          83    |          83.33 |
+{:.mbtablestyle}
+
 
