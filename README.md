@@ -16,4 +16,5 @@ Here are some steps we took in order to gather and clean the data
 3. Remove all data after 10-01-2023, since it is ongoing at the time of our project
 4. Fill missing playernames with "unknown player" (we will take a look at this in assessment of missingness).
 
-After completing these steps, here is the dataset we worked with. 
+After completing these steps, here is the dataset we worked with.
+<iframe> src="plots/df_teams.html" width=800 height=600 frameBorder=0></iframe>
