@@ -4,7 +4,7 @@ Used in dsc80 project 3
 Our dataset for this project is the set of all professional League of Legends games played, beginning in 2014. 
 Each game of league of legends is played on a diagonal asymmetrical map, which roughly looks like 
 
-<iframe src="assets/summoners_rift.jpg" width=800 height=600 frameBorder=0></iframe>.
+<iframe src="assets/summoners_rift.jpg" width=600 height=400 frameBorder=0></iframe>.
 
 
 While the map layout has changed slightly over the years (something we will discuss later), it has generally remained consistent. There are 2 teams of 5 players each, the blue team which starts on the bottom left of the map, and the red team which starts on the top right of the map. As we can see, this map is asymmetrical, meaning that there are differences between playing on the red and blue side.
@@ -21,18 +21,19 @@ Here are some steps we took to gather and clean the data
 
 After completing these steps, here is the dataset we worked with.
 
-|       | gameid               | league   |   game |   patch | side   | position   |   playername | teamname        |   champion |   gamelength |   result |   dragons |   elders |   opp_elders |   heralds |   barons |   opp_barons |   towers |   inhibitors |   vspm | Win?   |
-|------:|:---------------------|:---------|-------:|--------:|:-------|:-----------|-------------:|:----------------|-----------:|-------------:|---------:|----------:|---------:|-------------:|----------:|---------:|-------------:|---------:|-------------:|-------:|:-------|
-| 32650 | ESPORTSTMNT02/180233 | EU CS    |      1 |     7.1 | Blue   | team       |          nan | MNM Gaming      |        nan |         2387 |        1 |         2 |        0 |            0 |         0 |        2 |            0 |        7 |            1 | 7.6414 | Win    |
-| 32651 | ESPORTSTMNT02/180233 | EU CS    |      1 |     7.1 | Red    | team       |          nan | Millenium       |        nan |         2387 |        0 |         2 |        0 |            0 |         1 |        0 |            2 |        6 |            1 | 9.0239 | Loss   |
-| 32662 | ESPORTSTMNT02/180242 | EU CS    |      1 |     7.1 | Blue   | team       |          nan | EURONICS Gaming |        nan |         1762 |        0 |         0 |        0 |            0 |         0 |        0 |            2 |        0 |            0 | 6.4018 | Loss   |
-| 32663 | ESPORTSTMNT02/180242 | EU CS    |      1 |     7.1 | Red    | team       |          nan | Red Bulls       |        nan |         1762 |        1 |         3 |        0 |            0 |         0 |        2 |            0 |       11 |            2 | 8.6493 | Win    |
-| 32674 | ESPORTSTMNT02/190231 | EU CS    |      1 |     7.1 | Blue   | team       |          nan | Reign           |        nan |         2644 |        0 |         2 |        0 |            1 |         0 |        0 |            3 |        5 |            1 | 7.1029 | Loss   |
+|    | league   |   year | date                |   patch | side   | teamname          |   gamelength |   result |   dragons |   elders |   opp_elders |   barons |   opp_barons | Win?   |
+|---:|:---------|-------:|:--------------------|--------:|:-------|:------------------|-------------:|---------:|----------:|---------:|-------------:|---------:|-------------:|:-------|
+| 10 | EU LCS   |   2014 | 2014-01-14 17:52:02 |    3.15 | Blue   | Fnatic            |         1924 |        1 |         0 |        0 |            0 |        1 |            0 | Win    |
+| 11 | EU LCS   |   2014 | 2014-01-14 17:52:02 |    3.15 | Red    | Gambit Gaming     |         1924 |        0 |         0 |        0 |            0 |        0 |            1 | Loss   |
+| 22 | EU LCS   |   2014 | 2014-01-14 19:16:29 |    3.15 | Blue   | Copenhagen Wolves |         2474 |        1 |         0 |        0 |            0 |        1 |            0 | Win    |
+| 23 | EU LCS   |   2014 | 2014-01-14 19:16:29 |    3.15 | Red    | Alliance          |         2474 |        0 |         0 |        0 |            0 |        0 |            1 | Loss   |
+| 34 | EU LCS   |   2014 | 2014-01-14 21:28:45 |    3.15 | Blue   | Alliance          |         2629 |        0 |         0 |        0 |            0 |        0 |            1 | Loss   |
+
 {:.mbtablestyle}
 
 ## Univariate Analysis: 
 
-<iframe src="assets/univariate.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate.html" width=600 height=400 frameBorder=0></iframe>
 
 This pie chart shows that the `blue` side tends to win more games than the `red` side, suggesting that starting on the `blue` side might have provided certain advantages over the `red` side.
 
@@ -41,7 +42,7 @@ This pie chart shows that the `blue` side tends to win more games than the `red`
 
 For our bivariate analysis, we included several plots. One of the ones we tracked is the `win percentage` on each `side` by `gamelength`, where we split up our win rate by side into several different `gamelength` buckets. We found that the win rate advantage for blue side in shorter games (15-30) min was very high, above a 10% difference, while in longer games it seems that the `red` team tend to have a higher win rate.   
 
-<iframe src="assets/bivariate.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate.html" width=600 height=400 frameBorder=0></iframe>
 
 This vertical bar chart shows the `Blue Side Winrate Advantage` (y-axis), defined as `Blue side winrate - Red side winrate`, as grouped by "buckets" of `gamelength` (x-axis). We see that the `blue` teams are more likely to win in short-lasting matches (15-30 minutes), with the `Blue Side Winrate Advantage` decreasing as `gamelength` increases.
 
@@ -88,7 +89,7 @@ The first hypothesis test we did was on our initial research question:
 ***p-value:***
 </br> 0.0 (100,000 simulations)<br> 
 
-<iframe src="assets/MD_blue_adv.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/MD_blue_adv.html" width=600 height=400 frameBorder=0></iframe>
 
 ***Conclusion***
 <br> We reject the null hypothesis.<br> 
@@ -113,9 +114,9 @@ To answer this question, we compared the data from patches before and after patc
 <br>1% (0.01).<br> Same as before; we chose a stricter significance level to account for the high variability within League of Legends games
 
 ***p-value:***
-</br> 0.0031 (10,000 simulations)<br> 
+<br> 0.0031 (10,000 simulations)<br> 
 
-<iframe src="assets/MD_rift_diff.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/MD_rift_diff.html" width=600 height=400 frameBorder=0></iframe>
 
 ***Conclusion:***
 <br> We reject the null hypothesis. 
