@@ -193,4 +193,4 @@ To answer this question, we compared the data from `patch` before and after patc
 ***Conclusion:***
 <br> We reject the null hypothesis. 
 <p> This means that the `blue` side win rate from before and after the introdcution of the Rift Herald are <b>from different distributions</b>.
-<p> In other words, we have evidence to show that the introduction of the Rift Herald has balanced out the win rate difference between blue/red side.
+<p> In other words, we have evidence to show that the introduction of the Rift Herald has helped to balance out the win rate difference between blue/red side.
