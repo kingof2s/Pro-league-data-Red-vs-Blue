@@ -113,9 +113,9 @@ To answer this question, we compared the data from patches before and after patc
 <br>1% (0.01).<br> Same as before; we chose a stricter significance level to account for the high variability within League of Legends games
 
 ***p-value:***
-</br> 0.0 (10,000 simulations)<br> 
+</br> 0.0031 (10,000 simulations)<br> 
 
-<iframe src="assets/MD_blue_adv.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/MD_rift_diff.html" width=800 height=600 frameBorder=0></iframe>
 
 ***Conclusion:***
 <br> We reject the null hypothesis. 
