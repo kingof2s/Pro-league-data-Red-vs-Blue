@@ -74,15 +74,21 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 **NMAR**
 One column we identified as having NMAR data was the patch column. The patch column data appears to be completely missing between patches 3.15 and 4.03. Upon doing research, there were patches 4.01 and 4.02, but the matches played during this patch show up as missing. This means that the patch column is NMAR, since the missing values, at least in the matches played between patches 3.15 and 4.03 correspond to 4.01 and 4.02, their missingness is not at random.
 
-**Missingness Test**
+**Missingness Test (playername)**
 In our missingness test, we decided to look at the missingness of the the 'playername' column, and we identified one column that appeared to influence it and another column which didn't appear to influence it. 
 We first tested missingness of 'playername' with 'league', which describes the league that the pro match is played in. For example North American pro games are played in 'LCS', while Korean pro games are in 'LCK'.
-For this test we used the total variation difference between 'playername' and 'league'.
+For this test we used the total variation difference between 'playername' and 'league', and would reject with a standard p value < 0.05
 
 **Result (dependent)** 
 For this test we got a p-value of 0 with 10,000 repitions. This means that the playername is more likely to be missing if they are from certain reigons, meaning the 'playername' column is MAR. 
 
+**2nd Missingness Test**
+In this missingness test, we looked at the missingness of the 'playername' column with the 'side' column. We used the same test statistic of total variation distance, and the p value 0.05. 
 
+**Result (independent)**
+For this test we got a p-value of 0.708 with 10,000 repitions. This means that the missingness is playername is likely independent to the side of the map they played on.
+
+**Result (independent)** 
 # Hypothesis Testing
 The first hypothesis test we did was on our initial research question:
 
