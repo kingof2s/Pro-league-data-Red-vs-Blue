@@ -66,6 +66,7 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 {:.mbtablestyle}
 
 ## Assessment of missingness
+One column we identified as having NMAR data was the patch column. The patch column data appears to be completely missing between patches 3.15 and 4.03. Upon doing research, there were patches 4.01 and 4.02, but the matches played during this patch show up as missing. This means that the patch column is NMAR, since the missing values, at least in the matches played between patches 3.15 and 4.03 correspond to 4.01 and 4.02, their missingness is not at random. 
 
 ## Hypothesis Testing
 The first hypothesis test we did was our first question. In this test, we asked if Red and Blue win rates come from the same distribution. 
