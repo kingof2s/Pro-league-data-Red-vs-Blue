@@ -32,7 +32,7 @@ After completing these steps, here is the dataset we worked with.
 
 ## Univariate Analysis: 
 
-<iframe src="plots/univariate.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate.html" width=800 height=600 frameBorder=0></iframe>
 
 This pie chart shows that the `blue` side tends to win more games than the `red` side, suggesting that starting on the `blue` side might have provided certain advantages over the `red` side.
 
@@ -41,7 +41,7 @@ This pie chart shows that the `blue` side tends to win more games than the `red`
 
 For our bivariate analysis, we included several plots. One of the ones we tracked is the `win percentage` on each `side` by `gamelength`, where we split up our win rate by side into several different `gamelength` buckets. We found that the win rate advantage for blue side in shorter games (15-30) min was very high, above a 10% difference, while in longer games it seems that the `red` team tend to have a higher win rate.   
 
-<iframe src="plots/bivariate.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate.html" width=800 height=600 frameBorder=0></iframe>
 
 This vertical bar chart shows the `Blue Side Winrate Advantage` (y-axis), defined as `Blue side winrate - Red side winrate`, as grouped by "buckets" of `gamelength` (x-axis). We see that the `blue` teams are more likely to win in short-lasting matches (15-30 minutes), with the `Blue Side Winrate Advantage` decreasing as `gamelength` increases.
 
@@ -72,6 +72,8 @@ The first hypothesis test we did was our first question. In this test, we asked 
 
 Our null hypothesis was that red and blue side winrates are equal, so red=blue [0.5,0.5] distribution, and our alternative hypothesis was that blue winrate is higher, so red<blue. Our test statistic was difference in means, since we believed blue side is specifically higher we did not use total variation distance, required p value was 0.05 as standard.
 Our hypothesis test had a p value of 0.0042 in 100,000 tests, meaning that we should reject the null hypothesis and suggesting that being on  blue side has a statistically significant advantage for teams. 
+
+<iframe src="assets/MD_blue_adv.html" width=800 height=600 frameBorder=0></iframe>
 
 Even from the beginning, this lines up with the general community thought. Riot Games, the developers of League of Legends, realized this fact as well, and on patch 5.22 they introduced a change to the map. This change added a new neutral objective called rift herald, and was done partially as a way to more balance the side advantage.
 
