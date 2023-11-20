@@ -68,17 +68,58 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 ## Assessment of missingness
 
 ## Hypothesis Testing
-The first hypothesis test we did was our first question. In this test, we asked if Red and Blue win rates come from the same distribution. 
+The first hypothesis test we did was on our initial research question:
 
-Our null hypothesis was that red and blue side winrates are equal, so red=blue [0.5,0.5] distribution, and our alternative hypothesis was that blue winrate is higher, so red<blue. Our test statistic was difference in means, since we believed blue side is specifically higher we did not use total variation distance, required p value was 0.05 as standard.
-Our hypothesis test had a p value of 0.0042 in 100,000 tests, meaning that we should reject the null hypothesis and suggesting that being on  blue side has a statistically significant advantage for teams. 
+**Does the side that a professional team is assigned influence the outcome of the game?**
+<br><br>
+
+**Null Hypothesis:** 
+<br>In the population (of all games), the blue side does not have an advantage over the red side, so the difference in their win rates is due to random chance.
+
+**Alternate Hypothesis:** 
+<br>In the population (of all games), the blue side has some advantage over the red side, so the observed difference we saw cannot be attributed to random chance alone. 
+
+**Test Statistic**: <br>Difference in group means: <i>Mean result of blue side - Mean result of red side</i>
+
+***Significance Level***: 
+<br>1% (0.01).<br> The outcome of games can vary due to a large number of variables, so we chose a stricter significance level to be more certain that the bias in win rates is not due to random chance. 
+
+***p-value:***
+</br> 0.0 (100,000 simulations)<br> 
 
 <iframe src="assets/MD_blue_adv.html" width=800 height=600 frameBorder=0></iframe>
 
-Even from the beginning, this lines up with the general community thought. Riot Games, the developers of League of Legends, realized this fact as well, and on patch 5.22 they introduced a change to the map. This change added a new neutral objective called rift herald, and was done partially as a way to more balance the side advantage.
+***Conclusion***
+<br> We reject the null hypothesis.<br> 
+ This means that the difference in the blue side win rate is not out of random chance. In other words, it is likely that starting on the blue side grants the team certain advantages over the red side team. 
 
-In our second hypothesis test, we ask the questinon: **Did the winrate for blue side change after rift herald was introduced**.
-To do this, we compared the data from patches before and after patch 5.22, the patch which marked the introduction of rift herald
+ One such advantage could possibly be the positioning of neutral objectives like the Dragons, the Rift Heralds, and the Baron. We chose to explore the effects of the Rift Herald, which can provide the team that killed it an item that helps them earn gold and gain more control over the game. 
+ 
+ The Rift Herald lives closer to the red side team, and so we formed a second question:
+
+### Did the winrate for blue side change after the Rift Herald was added to the game?
+To answer this question, we compared the data from patches before and after patch 5.22, the patch which marked the introduction of the Rift Herald
+
+**Null Hypothesis:** 
+<br>The differences in win rate from before and after the introduction of the Rift Herald came from the same distribution.
+
+**Alternate Hypothesis:** 
+<br>The difference in win rate has decreased after the introduction of the Rift Herald
+
+**Test Statistic**: <br>Difference in group means: <i>Mean result of blue side - Mean result of red side</i>
+
+***Significance Level***: 
+<br>1% (0.01).<br> Same as before; we chose a stricter significance level to account for the high variability within League of Legends games
+
+***p-value:***
+</br> 0.0 (10,000 simulations)<br> 
+
+<iframe src="assets/MD_blue_adv.html" width=800 height=600 frameBorder=0></iframe>
+
+***Conclusion:***
+<br> We reject the null hypothesis. 
+<br> This means that the blue side win rate from before and after the introdcution of the Rift Herald are from different distributions.
+<br> In other words, we have evidence to show that the introduction of the Rift Herald has balanced out the win rate difference between blue/red side.
 
 Our null hypothesis is that the blueside winrates from before and after rift herald was added come from the same distribution. 
 Our alternative hypothesis is that the blue side winrate decreased after rift herald was introduced. We used a test statistic of subtracting winrates here, not the total variation distance since we believe that the blue side winrate specifically is less, p value of 0.05 as standard. 
