@@ -1,7 +1,7 @@
 # Pro-league-data-Red-vs-Blue
 This is a project for the DSC80 course at UCSD where we perform cleaning, EDA, missingness assessment, and permutation testing for datasets. We present our findings in this website.
 
-<b>Names:</b> David Lycke and Dhilan Sunanda Bong
+<b>Names:</b> Dhilan Sunanda Bong and David Lycke
 # Introduction
 Our dataset for this project is on all the professional League of Legends games played from 2013 until now. 
 Each game of league of legends is played on a diagonal asymmetrical map, which roughly looks like 
