@@ -1,19 +1,20 @@
 # Pro-league-data-Red-vs-Blue
-Used in dsc80 project 3 
 # Introduction
 Our dataset for this project is the set of all professional League of Legends games played, beginning in 2014. 
 Each game of league of legends is played on a diagonal asymmetrical map, which roughly looks like 
 
 <iframe src="assets/summoners_rift.jpg" width=600 height=400 frameBorder=0></iframe>.
 
+<br>
 
 While the map layout has changed slightly over the years (something we will discuss later), it has generally remained consistent. There are 2 teams of 5 players each, the blue team which starts on the bottom left of the map, and the red team which starts on the top right of the map. As we can see, this map is asymmetrical, meaning that there are differences between playing on the red and blue side.
 
 We wanted to take a look at how those differences affect pro matches by asking the question:
 
   **Does the side that a professional team is assigned influence the outcome of the game?**
+<br>
 
-## Cleaning 
+# Cleaning 
 Here are some steps we took to gather and clean the data 
 1. Download all the data from years 2014-2023 from oracle as csv files, open them and combine into 1 dataset
 2. Convert the date to datatime format, making it easier to look at data within a certain time interval
@@ -31,14 +32,17 @@ After completing these steps, here is the dataset we worked with.
 
 {:.mbtablestyle}
 
-## Univariate Analysis: 
+<br>
+
+# Univariate Analysis: 
 
 <iframe src="assets/univariate.html" width=600 height=400 frameBorder=0></iframe>
 
 This pie chart shows that the `blue` side tends to win more games than the `red` side, suggesting that starting on the `blue` side might have provided certain advantages over the `red` side.
 
+<br>
 
-## Bivariate Analysis:
+# Bivariate Analysis:
 
 For our bivariate analysis, we included several plots. One of the ones we tracked is the `win percentage` on each `side` by `gamelength`, where we split up our win rate by side into several different `gamelength` buckets. We found that the win rate advantage for blue side in shorter games (15-30) min was very high, above a 10% difference, while in longer games it seems that the `red` team tend to have a higher win rate.   
 
@@ -46,7 +50,7 @@ For our bivariate analysis, we included several plots. One of the ones we tracke
 
 This vertical bar chart shows the `Blue Side Winrate Advantage` (y-axis), defined as `Blue side winrate - Red side winrate`, as grouped by "buckets" of `gamelength` (x-axis). We see that the `blue` teams are more likely to win in short-lasting matches (15-30 minutes), with the `Blue Side Winrate Advantage` decreasing as `gamelength` increases.
 
-## Interesting Aggregates:
+# Interesting Aggregates:
 
 In a round of League of Legends, there exist neutral objectives that spawn in fiexd locations in the map. These objectives are monsters that can be taken by either team, but doing so requires you to fight them (and usually the opposite team too). However, a team that manages to take one earns a large advantage, whether through bonus gold that can be used for purchasing powerful items, or a teamwide increase in the character's combat power. There are two major neutral objectives, the Elder Dragon and Baron Nashor, that spawn on different sides of the map that are especially impactful to the game, so we decided to test how much a team's starting side affects the likelihood for them to take either of those two. The Elder Dragon spawns closer to the blue side of the map, while Baron Nashor spawns closer to the red side of the map. 
 
@@ -66,10 +70,10 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 | 2+ More Elders  |          83    |          83.33 |
 {:.mbtablestyle}
 
-## Assessment of missingness
+# Assessment of missingness
 One column we identified as having NMAR data was the patch column. The patch column data appears to be completely missing between patches 3.15 and 4.03. Upon doing research, there were patches 4.01 and 4.02, but the matches played during this patch show up as missing. This means that the patch column is NMAR, since the missing values, at least in the matches played between patches 3.15 and 4.03 correspond to 4.01 and 4.02, their missingness is not at random. 
 
-## Hypothesis Testing
+# Hypothesis Testing
 The first hypothesis test we did was on our initial research question:
 
 **Does the side that a professional team is assigned influence the outcome of the game?**
