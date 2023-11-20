@@ -82,6 +82,10 @@ For this test we used the total variation difference between 'playername' and 'l
 **Result (dependent)** 
 For this test we got a p-value of 0 with 10,000 repitions. This means that the playername is more likely to be missing if they are from certain reigons, meaning the 'playername' column is MAR. 
 
+
+<iframe src="assets/missingness_league.html" width=640 height=400 frameBorder=0></iframe>
+
+
 **2nd Missingness Test**
 In this missingness test, we looked at the missingness of the 'playername' column with the 'side' column. We used the same test statistic of total variation distance, and the p value 0.05. 
 
@@ -89,6 +93,11 @@ In this missingness test, we looked at the missingness of the 'playername' colum
 For this test we got a p-value of 0.708 with 10,000 repitions. This means that the missingness is playername is likely independent to the side of the map they played on.
 
 **Result (independent)** 
+
+
+<iframe src="assets/missingness_side.html" width=640 height=400 frameBorder=0></iframe>
+
+
 # Hypothesis Testing
 The first hypothesis test we did was on our initial research question:
 
