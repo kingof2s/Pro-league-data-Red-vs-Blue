@@ -109,13 +109,13 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 | 2+ More Elders  |          83    |          83.33 |
 {:.mbtablestyle}
 
-## Assessment of missingness
+## Assessment of Missingness:
 **NMAR**<br>
 One column we identified as having NMAR data was the `'patch'` column. The `'patch'` column data appears to be completely missing between patches 3.15 and 4.03. Upon doing research, there existed patches 4.01 and 4.02 in the history of the game, but that was not indicated in the dataframe. This means that the `'patch'` column is NMAR, since the missing values are in either 4.01 or 4.02, so their missingness is not at random, and can be determined based on the `'dates'` they are played.
 
-**1st Missingness Test (playername by league)**<br>
+**1st Missingness Test (playername by league)** <br>
 In our missingness test, we decided to look at the missingness of the the `'playername'` column, and we identified one column that appeared to influence it and another column which didn't appear to influence it. 
-We first tested missingness of `'playername'` with `'league'`, which describes the league that the pro match is played in. For example North American pro games are played in 'LCS', while Korean pro games are in 'LCK'.
+We first tested missingness of `'playername'` with `'league'`, which describes the league that the pro match is played in, which generally responds to a reigon. For example North American pro games are played in the league 'LCS', while Korean pro games are in 'LCK'.
 For this test we used the total variation difference between `'playername'` and `'league'`, and would reject with a standard p value < 0.05
 
 **Result (dependent)** <br>
@@ -125,11 +125,11 @@ For this test we got a p-value of 0 with 10,000 repitions. This means that the `
 <iframe src="assets/missingness_league.html" width=640 height=400 frameBorder=0></iframe>
 
 
-**2nd Missingness Test (playername by side)**<br>
+**2nd Missingness Test (playername by side)** <br>
 In this missingness test, we looked at the missingness of the `'playername'` column with the `'side'` column. We used the same test statistic of total variation distance, and the p value 0.05. 
 
-**Result (independent)**<br>
-For this test we got a p-value of 0.708 with 10,000 repitions. This means that the missingness is `'playername'` is likely independent to the `'side'` they played on.
+**Result (independent)** <br>
+For this test we got a p-value of 0.708 with 10,000 repitions. Since this is way above our p value of 0.05, it suggests that the missingness is `'playername'` is likely independent to the `'side'` they played on.
 
 **Result (independent)** 
 
