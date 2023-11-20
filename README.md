@@ -70,4 +70,15 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 ## Hypothesis Testing
 The first hypothesis test we did was our first question. In this test, we asked if Red and Blue win rates come from the same distribution. 
 
-Our null hypothesis was that red and blue side winrates are equal, so red=blue [0.5,0.5] distribution, and our alternative hypothesis was that blue winrate is higher, so red<blue. Our hypothesis test had a p value of 0.0042 in 100,000 tests, meaning that we should reject the null hypothesis and suggesting that being on  blue side has a statistically significant advantage for teams
+Our null hypothesis was that red and blue side winrates are equal, so red=blue [0.5,0.5] distribution, and our alternative hypothesis was that blue winrate is higher, so red<blue. Our test statistic was difference in means, since we believed blue side is specifically higher we did not use total variation distance, required p value was 0.05 as standard.
+Our hypothesis test had a p value of 0.0042 in 100,000 tests, meaning that we should reject the null hypothesis and suggesting that being on  blue side has a statistically significant advantage for teams. 
+
+Even from the beginning, this lines up with the general community thought. Riot Games, the developers of League of Legends, realized this fact as well, and on patch 5.22 they introduced a change to the map. This change added a new neutral objective called rift herald, and was done partially as a way to more balance the side advantage.
+
+In our second hypothesis test, we ask the questinon: **Did the winrate for blue side change after rift herald was introduced**.
+To do this, we compared the data from patches before and after patch 5.22, the patch which marked the introduction of rift herald
+
+Our null hypothesis is that the blueside winrates from before and after rift herald was added come from the same distribution. 
+Our alternative hypothesis is that the blue side winrate decreased after rift herald was introduced. We used a test statistic of subtracting winrates here, not the total variation distance since we believe that the blue side winrate specifically is less, p value of 0.05 as standard. 
+
+Our hypothesis test had a p value of 0.0 in 10,000 permutation tests. This means we reject the null hypothesis, and suggests very strong evidence that the addition of rift herald did in fact make the blue side less likely to win. 
