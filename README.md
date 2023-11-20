@@ -3,7 +3,7 @@
 Our dataset for this project is the set of all professional League of Legends games played, beginning in 2014. 
 Each game of league of legends is played on a diagonal asymmetrical map, which roughly looks like 
 
-<iframe src="assets/summoners_rift.jpg" width=600 height=400 frameBorder=0></iframe>.
+<iframe src="assets/summoners_rift.jpg" width=640 height=400 frameBorder=0></iframe>.
 
 <br>
 
@@ -36,7 +36,7 @@ After completing these steps, here is the dataset we worked with.
 
 # Univariate Analysis: 
 
-<iframe src="assets/univariate.html" width=600 height=400 frameBorder=0></iframe>
+<iframe src="assets/univariate.html" width=640 height=400 frameBorder=0></iframe>
 
 This pie chart shows that the `blue` side tends to win more games than the `red` side, suggesting that starting on the `blue` side might have provided certain advantages over the `red` side.
 
@@ -46,7 +46,7 @@ This pie chart shows that the `blue` side tends to win more games than the `red`
 
 For our bivariate analysis, we included several plots. One of the ones we tracked is the `win percentage` on each `side` by `gamelength`, where we split up our win rate by side into several different `gamelength` buckets. We found that the win rate advantage for blue side in shorter games (15-30) min was very high, above a 10% difference, while in longer games it seems that the `red` team tend to have a higher win rate.   
 
-<iframe src="assets/bivariate.html" width=600 height=400 frameBorder=0></iframe>
+<iframe src="assets/bivariate.html" width=640 height=400 frameBorder=0></iframe>
 
 This vertical bar chart shows the `Blue Side Winrate Advantage` (y-axis), defined as `Blue side winrate - Red side winrate`, as grouped by "buckets" of `gamelength` (x-axis). We see that the `blue` teams are more likely to win in short-lasting matches (15-30 minutes), with the `Blue Side Winrate Advantage` decreasing as `gamelength` increases.
 
@@ -97,7 +97,7 @@ The first hypothesis test we did was on our initial research question:
 ***p-value:***
 </br> 0.0 (100,000 simulations)<br> 
 
-<iframe src="assets/MD_blue_adv.html" width=600 height=400 frameBorder=0></iframe>
+<iframe src="assets/MD_blue_adv.html" width=640 height=400 frameBorder=0></iframe>
 
 ***Conclusion***
 <br> We reject the null hypothesis.<br> 
@@ -124,7 +124,7 @@ To answer this question, we compared the data from patches before and after patc
 ***p-value:***
 <br> 0.0031 (10,000 simulations)<br> 
 
-<iframe src="assets/MD_rift_diff.html" width=600 height=400 frameBorder=0></iframe>
+<iframe src="assets/MD_rift_diff.html" width=640 height=400 frameBorder=0></iframe>
 
 ***Conclusion:***
 <br> We reject the null hypothesis. 
