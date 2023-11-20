@@ -120,8 +120,3 @@ To answer this question, we compared the data from patches before and after patc
 <br> We reject the null hypothesis. 
 <br> This means that the blue side win rate from before and after the introdcution of the Rift Herald are from different distributions.
 <br> In other words, we have evidence to show that the introduction of the Rift Herald has balanced out the win rate difference between blue/red side.
-
-Our null hypothesis is that the blueside winrates from before and after rift herald was added come from the same distribution. 
-Our alternative hypothesis is that the blue side winrate decreased after rift herald was introduced. We used a test statistic of subtracting winrates here, not the total variation distance since we believe that the blue side winrate specifically is less, p value of 0.05 as standard. 
-
-Our hypothesis test had a p value of 0.0 in 10,000 permutation tests. This means we reject the null hypothesis, and suggests very strong evidence that the addition of rift herald did in fact make the blue side less likely to win. 
