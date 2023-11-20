@@ -3,7 +3,7 @@
 Our dataset for this project is the set of all professional League of Legends games played, beginning in 2014. 
 Each game of league of legends is played on a diagonal asymmetrical map, which roughly looks like 
 
-<iframe src="assets/summoners_rift.jpg" width=640 height=400 frameBorder=0></iframe>.
+<iframe src="assets/summoners_rift.jpg" width=642 height=460 frameBorder=0></iframe>.
 
 <br>
 
@@ -97,7 +97,9 @@ The first hypothesis test we did was on our initial research question:
 ***p-value:***
 </br> 0.0 (100,000 simulations)<br> 
 
+
 <iframe src="assets/MD_blue_adv.html" width=640 height=400 frameBorder=0></iframe>
+
 
 ***Conclusion***
 <br> We reject the null hypothesis.<br> 
@@ -124,7 +126,9 @@ To answer this question, we compared the data from patches before and after patc
 ***p-value:***
 <br> 0.0031 (10,000 simulations)<br> 
 
+
 <iframe src="assets/MD_rift_diff.html" width=640 height=400 frameBorder=0></iframe>
+
 
 ***Conclusion:***
 <br> We reject the null hypothesis. 
