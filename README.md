@@ -68,3 +68,6 @@ In a round of League of Legends, there exist neutral objectives that spawn in fi
 ## Assessment of missingness
 
 ## Hypothesis Testing
+The first hypothesis test we did was our first question. In this test, we asked if Red and Blue win rates come from the same distribution. 
+
+Our null hypothesis was that red and blue side winrates are equal, so red=blue [0.5,0.5] distribution, and our alternative hypothesis was that blue winrate is higher, so red<blue. Our hypothesis test had a p value of 0.0042 in 100,000 tests, meaning that we should reject the null hypothesis and suggesting that being on  blue side has a statistically significant advantage for teams
